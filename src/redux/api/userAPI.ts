@@ -40,15 +40,13 @@ export const userAPI = createApi({
 });
 
 export const getUser = async (id: string) => {
-  try {
+
     const { data }: { data: UserResponse } = await axios.get(
       `${import.meta.env.VITE_SERVER}/api/v1/user/${id}`
     );
 
     return data;
-  } catch (error) {
-    throw error;
-  }
+  
 };
 
 export const { useLoginMutation, useAllUsersQuery, useDeleteUserMutation } =

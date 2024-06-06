@@ -27,6 +27,7 @@ const ProductCard = ({
 
       <div>
         <button
+          type="button"
           onClick={() =>
             handler({ productId, price, name, photo, stock, quantity: 1 })
           }
